@@ -3,8 +3,8 @@
 let hora = 0
 let minuto = 0
 let segundo = 0 
-
 let mostradorContagem = document.querySelector('.mostradorContagem>h1')
+let  rodarContagem = false
 
 
 function formataçãoContagem() {
@@ -40,14 +40,16 @@ function formataçãoContagem() {
 }
 
 function contagem() {
-    segundo++
+    if (rodarContagem == true) {
+        segundo++
+    }
 
-    if (segundo > 60) {
+    if (segundo > 59) {
         minuto++
         segundo = 0
     }
 
-    if (minuto > 60) {
+    if (minuto > 59) {
         hora++
         minuto = 0
     }
@@ -61,4 +63,4 @@ function contagem() {
     formataçãoContagem()
 }
 
-setInterval(contagem, )
+setInterval(contagem, 1000)

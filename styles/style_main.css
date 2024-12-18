@@ -47,7 +47,7 @@ main {
 
 .mostradorContagem {
     text-align: center;
-    color: light-dark(var(--preto02), var(--branco02));
+    color: light-dark(var(--preto02), var(--preto02));
     border-radius: 15px;
     padding: 25px;
     font-size: 2.5em;

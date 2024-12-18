@@ -40,9 +40,11 @@ main {
     margin: auto;
     border-radius: 20px;
     box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.479);
-    width: 380px;
+    width: 80vw;
     padding: 15px;
     background-color: light-dark(var(--branco04), var(--preto01));
+    transition: width 500ms;
+    transition-timing-function: ease;
 }
 
 .mostradorContagem {
@@ -52,6 +54,8 @@ main {
     padding: 25px;
     font-size: 2.5em;
     background-color: light-dark(var(--branco01), var(--preto04));
+    transition: width 500ms, font-size 500ms;
+    transition-timing-function: ease;
 }
 
 .botõesContagem {
@@ -66,7 +70,7 @@ main {
     margin: 20px 15px 10px;
     border-radius: 20px;
     padding: 20px;
-    transition: color 500ms, background-color 500ms;
+    transition: color 500ms, background-color 500ms, font-size 500ms;
     transition-timing-function: ease;
 }
 

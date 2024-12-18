@@ -8,3 +8,44 @@ Tablet: de 768px até 992px
 Computador: de 992px até 1200px
 Grandes telas: acima de 1200px
 */
+
+@media screen and (min-width: 600px) {
+    main {
+        width: 80vw;
+        max-width: 550px;
+        transition: width 500ms, max-width 500ms;
+        transition-timing-function: ease;
+    }
+
+    .mostradorContagem {
+        font-size: 3.5em;
+        transition: width 500ms, font-size 500ms;
+        transition-timing-function: ease;
+    }
+
+    .btnIniciar, .btnReiniciar, .btnParar {
+        font-size: 1.3em;
+        transition: color 500ms, background-color 500ms, font-size 500ms;
+        transition-timing-function: ease;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        width: 700px;
+        transition: width 500ms;
+        transition-timing-function: ease;
+    }
+
+    .mostradorContagem {
+        font-size: 4em;
+        transition: width 500ms, font-size 500ms;
+        transition-timing-function: ease;
+    }
+
+    .btnIniciar, .btnReiniciar, .btnParar {
+        font-size: 1.5em;
+        transition: color 500ms, background-color 500ms, font-size 500ms;
+        transition-timing-function: ease;
+    }
+}

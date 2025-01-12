@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+:root {
+    /*Paleta de Sombras do Branco*/
+    --branco01: #FFFFFF;
+    --branco02: #F6F6F6;
+    --branco03: #D4D4D4;
+    --branco04: #B3B3B3;
+    --branco05: #919191;
+    --branco06: #6F6F6F;
+
+    /*Paleta de Sombras do Preto*/
+    --preto01: #000000;
+    --preto02: #3C3C3C;
+    --preto03: #5E5E5E;
+    --preto04: #808080;
+    --preto05: #A2A2A2;
+    --preto06: #C3C3C3;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    background-color: var(--preto01);
+}
+
+body {
+    display: none;
+}
+
+@media (min-width:320px)  {
+    body {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--preto04);
+    }
+    
+    main {
+        cursor: default;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.479);
+        width: 80vw;
+        padding: 15px;
+        background-color: var(--preto01);
+    }
+    
+    .mostradorContagem {
+        text-align: center;
+        color: var(--preto02);
+        border-radius: 15px;
+        padding: 25px;
+        font-size: 2.5em;
+        background-color: var(--preto04);
+    }
+    
+    .botõesContagem {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .btnIniciar, .btnReiniciar, .btnParar {
+        cursor: pointer;
+        background-color: var(--preto02);
+        color: var(--branco03);
+        margin: 20px 15px 10px;
+        border-radius: 20px;
+        padding: 20px;
+
+        &:hover {
+            color: var(--preto02);
+            background-color: var(--branco03);
+        }
+    }
+}
+
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }

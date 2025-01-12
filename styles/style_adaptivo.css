@@ -33,54 +33,79 @@ body {
 
 @media (min-width:320px)  {
     body {
-        display: flex;
+        display: block;
         height: 100vh;
-        width: 100vw;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: var(--preto04);
     }
     
     main {
         cursor: default;
-        margin: auto;
-        border-radius: 20px;
-        box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.479);
-        width: 80vw;
-        padding: 15px;
-        background-color: var(--preto01);
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--preto04);
     }
     
     .mostradorContagem {
-        text-align: center;
-        color: var(--preto02);
-        border-radius: 15px;
-        padding: 25px;
-        font-size: 2.5em;
-        background-color: var(--preto04);
+        background-color: var(--preto01);
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.479);
+        
+        &>h1 {
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 3.3em;
+            background-color: var(--preto05);
+            color: var(--preto02);
+        }
     }
     
     .botõesContagem {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        
     }
     
-    .btnIniciar, .btnReiniciar, .btnParar {
+    .btn {
         cursor: pointer;
         background-color: var(--preto02);
-        color: var(--branco03);
-        margin: 20px 15px 10px;
-        border-radius: 20px;
-        padding: 20px;
+        color: var(--preto06);
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        
+        &>h1 {
+            font-size: 1.3em;
+        }
 
         &:hover {
-            color: var(--preto02);
-            background-color: var(--branco03);
+            color: var(--preto01);
+            background-color: var(--preto05);
         }
     }
 }
 
-@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+@media (min-width:480px)  {
+    .mostradorContagem > h1 {
+        font-size: 5em;
+    }
+
+    .btn > h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width:801px)  {
+    
+    .mostradorContagem > h1 {
+        font-size: 6.5em;
+    }
+
+    .btn > h1 {
+        font-size: 2.5em;
+    }
+}
